@@ -30,9 +30,9 @@
         {
             this.Search = new System.Windows.Forms.Button();
             this.Browse = new System.Windows.Forms.Button();
-            this.Text = new System.Windows.Forms.TextBox();
+            this.txtSearchSubstring = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSearchDirectory = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IbxResults = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
@@ -57,12 +57,13 @@
             this.Browse.UseVisualStyleBackColor = true;
             this.Browse.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Text
+            // txtSearchSubstring
             // 
-            this.Text.Location = new System.Drawing.Point(215, 51);
-            this.Text.Name = "Text";
-            this.Text.Size = new System.Drawing.Size(294, 22);
-            this.Text.TabIndex = 2;
+            this.txtSearchSubstring.Location = new System.Drawing.Point(215, 51);
+            this.txtSearchSubstring.Name = "txtSearchSubstring";
+            this.txtSearchSubstring.Size = new System.Drawing.Size(294, 22);
+            this.txtSearchSubstring.TabIndex = 2;
+            this.txtSearchSubstring.TextChanged += new System.EventHandler(this.Text_TextChanged);
             // 
             // label1
             // 
@@ -73,13 +74,14 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Filename Containing:";
             // 
-            // textBox2
+            // txtSearchDirectory
             // 
-            this.textBox2.Location = new System.Drawing.Point(215, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(294, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtSearchDirectory.Location = new System.Drawing.Point(215, 93);
+            this.txtSearchDirectory.Name = "txtSearchDirectory";
+            this.txtSearchDirectory.ReadOnly = true;
+            this.txtSearchDirectory.Size = new System.Drawing.Size(294, 22);
+            this.txtSearchDirectory.TabIndex = 4;
+            this.txtSearchDirectory.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -107,9 +109,9 @@
             this.ClientSize = new System.Drawing.Size(672, 450);
             this.Controls.Add(this.IbxResults);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtSearchDirectory);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Text);
+            this.Controls.Add(this.txtSearchSubstring);
             this.Controls.Add(this.Browse);
             this.Controls.Add(this.Search);
             this.Name = "Form1";
@@ -124,9 +126,9 @@
 
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Button Browse;
-        private System.Windows.Forms.TextBox Text;
+        private System.Windows.Forms.TextBox txtSearchSubstring;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSearchDirectory;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox IbxResults;
     }

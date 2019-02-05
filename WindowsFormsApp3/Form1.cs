@@ -15,6 +15,7 @@ namespace WindowsFormsApp3
     {
         string strSearchDirectory;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -58,6 +59,16 @@ namespace WindowsFormsApp3
         }//buttonclick
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
